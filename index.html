@@ -21,6 +21,7 @@
         <a href="#gallery" class="navigation__item">Gallery</a>
         <a href="#contact" class="navigation__item">Contact</a>
       </nav>
+      <input type="checkbox" id="theme-switch" class="header__theme-switch" />
     </header>
 
     <!-- Main content -->
@@ -172,5 +173,13 @@
     <!-- Footer -->
     <footer class="footer"><p>Made with love by XY</p></footer>
     <a class="scroll-up" href="#" title="Scroll me up scotty">👆</a>
+    <script>
+      const themeSwitch = document.querySelector("#theme-switch");
+      if (themeSwitch) {
+        themeSwitch.addEventListener("click", function (e) {
+          document.body.classList.toggle("alternate");
+        });
+      }
+    </script>
   </body>
 </html>
