@@ -2,11 +2,13 @@
 
 html {
   box-sizing: border-box;
+  /* TODO: we should add a media query for that later :-) */
+  scroll-behavior: smooth;
 }
 *,
 *::before,
 *::after {
-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -63,7 +65,8 @@ body > footer *::selection {
   text-decoration-color: gold;
 }
 
-.navigation__item:active, .navigation__item:focus {
+.navigation__item:active,
+.navigation__item:focus {
   background-color: gold;
   outline: transparent;
 }
@@ -72,6 +75,19 @@ body > footer *::selection {
 }
 .main > * + * {
   margin-top: 80px;
+}
+.featured-recipe {
+  position: relative;
+}
+
+.featured-recipe__badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: salmon;
+  border: 3px solid gold;
 }
 .featured-recipe__title--hot::after {
   content: " 🔥";
@@ -106,4 +122,17 @@ body > footer *::selection {
   text-align: center;
   background-color: salmon;
   color: black;
+}
+.scroll-up {
+  display: block;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 5px;
+  border: 5px dashed gold;
+  text-decoration: none;
+}
+
+.scroll-up:hover {
+  background-color: gold;
 }
