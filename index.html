@@ -10,29 +10,122 @@
     <!-- Header -->
     <header>
       <h1>Yummy!</h1>
-      <nav>Navigation</nav>
+      <p>Best food blog in the world</p>
+      <nav>
+        <a href="#featured">Featured Recipes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <!-- Main content -->
     <main>
       <article>
-        <h2>Intro</h2>
+        <blockquote>
+          We strive to be the best food blog in the whole web. Food is our
+          passion and we love to bring you the latest recipes.
+        </blockquote>
+        <small>This is what our founder said</small>
       </article>
 
-      <article>
+      <article id="featured">
         <h2>Featured Recipes</h2>
+        <figure>
+          <img
+            src="https://picsum.photos/400/400"
+            width="400"
+            height="400"
+            alt=""
+          />
+          <figcaption>Chicken soup with garlic</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/400"
+            width="400"
+            height="400"
+            alt=""
+          />
+          <figcaption>Beef with orange juice</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/400"
+            width="400"
+            height="400"
+            alt=""
+          />
+          <figcaption>Noodle salad with peanuts</figcaption>
+        </figure>
       </article>
 
-      <article>
+      <article id="gallery">
         <h2>Gallery</h2>
+        <img
+          src="https://picsum.photos/200/200"
+          width="200"
+          height="200"
+          alt=""
+        />
+        <img
+          src="https://picsum.photos/200/200"
+          width="200"
+          height="200"
+          alt=""
+        />
+        <img
+          src="https://picsum.photos/200/200"
+          width="200"
+          height="200"
+          alt=""
+        />
+        <img
+          src="https://picsum.photos/200/200"
+          width="200"
+          height="200"
+          alt=""
+        />
+        <img
+          src="https://picsum.photos/200/200"
+          width="200"
+          height="200"
+          alt=""
+        />
+        <img
+          src="https://picsum.photos/200/200"
+          width="200"
+          height="200"
+          alt=""
+        />
       </article>
 
-      <article>
+      <article id="contact">
         <h2>Contact Form</h2>
+        <form>
+          <!-- Name -->
+          <label for="name">Name</label><br />
+          <input type="text" name="name" id="name" required /><br />
+
+          <!-- Email -->
+          <label for="email">Email</label><br />
+          <input type="email" name="email" id="email" required /><br />
+
+          <!-- Message -->
+          <label for="message">Message</label><br />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea
+          ><br />
+          <button type="submit">Send</button>
+        </form>
       </article>
     </main>
 
     <!-- Footer -->
-    <footer>Footer</footer>
+    <footer><p>Made with love by XY</p></footer>
   </body>
 </html>
