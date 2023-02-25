@@ -40,6 +40,20 @@ body > footer *::selection {
   background-color: black;
   color: salmon;
 }
+/* horizontal bar behind the main headings */
+article > h2 {
+  display: flex;
+  align-items: flex-end;
+}
+
+article > h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  flex-grow: 1;
+  margin-left: 15px;
+  background-color: salmon;
+}
 /* Use case specific styling */
 .header {
   padding: 16px;
@@ -72,12 +86,20 @@ body > footer *::selection {
 }
 .main {
   padding: 16px;
+  max-width: 780px;
+  margin: 0 auto;
 }
 .main > * + * {
   margin-top: 80px;
 }
+.featured-recipes__content {
+  display: flex;
+  gap: 16px;
+}
 .featured-recipe {
   position: relative;
+  /* remove margin from figure */
+  margin: 0;
 }
 
 .featured-recipe__badge {
@@ -99,6 +121,14 @@ body > footer *::selection {
 
 .featured-recipe__title--beef::after {
   content: " 🐄";
+}
+.gallery__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.gallery__image {
+  flex: 1;
 }
 .contact-form__input {
   margin-bottom: 16px;
